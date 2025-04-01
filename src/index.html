@@ -1,13 +1,103 @@
-<!DOCTYPE html>
+<!doctype html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Miami</title>
-    <link rel="stylesheet" href="./styles/main.scss">
-    <script src="scripts/main.js" defer></script>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>2048 game</title>
+
+    <link
+      rel="icon"
+      href="./icons/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <link rel="stylesheet" href="./styles/main.scss" />
+
+    <script
+      type="text/javascript"
+      src="scripts/main.js"
+      defer
+    ></script>
   </head>
+
   <body>
-    <h1>Landing Page</h1>
+    <main class="container">
+      <header class="game-header">
+        <h1>2048</h1>
+
+        <div class="controls">
+          <p class="info" aria-live="polite">
+            Score: <span class="game-score" aria-label="Current score">0</span>
+          </p>
+
+          <button class="button start" aria-label="Start the game">
+            Start
+          </button>
+        </div>
+      </header>
+
+      <section class="game-board" aria-label="Game board">
+        <table class="game-field" role="grid">
+          <tbody>
+            <tr class="field-row">
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+            </tr>
+
+            <tr class="field-row">
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+            </tr>
+
+            <tr class="field-row">
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+            </tr>
+
+            <tr class="field-row">
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+
+              <td class="field-cell" role="gridcell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="message-container" aria-live="polite">
+        <p class="message message-lose hidden" role="alert">
+          You lose! Restart the game?
+        </p>
+
+        <p class="message message-win hidden" role="alert">
+          Winner! Congrats! You did it!
+        </p>
+
+        <p class="message message-start">
+          Press "Start" to begin game. Good luck!
+        </p>
+      </section>
+    </main>
   </body>
 </html>
